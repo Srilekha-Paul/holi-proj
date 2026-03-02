@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -17,7 +17,7 @@
 
   <section class="details">
     <h2>🎊 Event Details</h2>
-    <p><strong>Date:</strong> 14th March 2026</p>
+    <p><strong>Date:</strong> 3rd & 4th March 2026</p>
     <p><strong>Venue:</strong> Open Garden Arena</p>
     <p><strong>Entry Package:</strong> ₹500 per Person</p>
     <p>Enjoy colors, music, food & unlimited fun!</p>
@@ -26,12 +26,13 @@
   <section class="menu">
     <h2>🍽️ Special Holi Menu</h2>
     <ul>
+      <li>🌸 Organic Colors</li>
       <li>🥤 Cold Drinks</li>
+      <li>Icecream</li>
       <li>🍗 Chicken Thali</li>
       <li>🥗 Veg Thali</li>
-      <li>🥃 Bhang</li>
-      <li>🌸 Organic Colors</li>
-      <li>🥛 Lassi</li>
+      <li>🥃 Bhang Pakora</li>
+      <li>🥛 Lassi with or without bhang</li>
     </ul>
   </section>
 
@@ -57,5 +58,88 @@
   </div>
 
   <script src="script.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Holi Rang Mahotsav 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<header>
+  <div class="logo">🌈 RangMahotsav</div>
+  <nav id="navMenu">
+    <a href="#">Home</a>
+    <a href="#venue">Venue</a>
+    <a href="#facility">Facilities</a>
+    <a href="#booking">Book Slot</a>
+  </nav>
+  <div class="menu-toggle" id="menuToggle">☰</div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Celebrate Holi 2026 in Full Colors 🎉</h1>
+    <p>Unlimited Fun | Organic Colors | Music | Food | Water Splash</p>
+    <button onclick="scrollToBooking()">Book Your Slot - ₹500</button>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about fade">
+  <h2>About The Event</h2>
+  <p>Join us for a vibrant Holi celebration with DJ, rain dance,
+     organic colors, delicious thali & refreshing drinks.</p>
+</section>
+
+<!-- Venue -->
+<section class="venue fade" id="venue">
+  <h2>Venue</h2>
+  <p>Open Garden Arena, Near City Center</p>
+</section>
+
+<!-- Facilities -->
+<section class="facility fade" id="facility">
+  <h2>Facilities</h2>
+  <div class="grid">
+    <div>🎵 DJ Music</div>
+    <div>🌊 Rain Dance</div>
+    <div>🌸 Organic Colors</div>
+    <div>🍽️ Veg & Chicken Thali</div>
+    <div>🥤 Cold Drinks & Lassi</div>
+    <div>🥃 Bhang Corner</div>
+  </div>
+</section>
+
+<!-- Booking -->
+<section class="booking fade" id="booking">
+  <h2>Book Your Holi Slot</h2>
+  <form id="bookingForm">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <select required>
+      <option value="">Select Slot</option>
+      <option>Morning (9AM - 12PM)</option>
+      <option>Afternoon (1PM - 4PM)</option>
+      <option>Evening (4PM - 7PM)</option>
+    </select>
+    <input type="number" placeholder="Number of Persons" required>
+    <button type="submit">Confirm Booking</button>
+  </form>
+</section>
+
+<footer>
+  <p>© 2026 RangMahotsav | Happy Holi 🌈</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

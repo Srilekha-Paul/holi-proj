@@ -1,0 +1,297 @@
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0, #ff1493);
+  background-size: 400% 400%;
+  animation: gradientBG 8s ease infinite;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+header {
+  padding: 50px 20px;
+}
+
+header h1 {
+  font-size: 3rem;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+section {
+  margin: 40px 20px;
+  padding: 30px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 20px;
+}
+
+.menu ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.menu li {
+  padding: 8px;
+  font-size: 18px;
+}
+
+.booking form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 400px;
+  margin: auto;
+}
+
+input, select {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+button {
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  background: yellow;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: orange;
+  transform: scale(1.05);
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  transition: 0.4s;
+}
+
+.popup.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.abir {
+  position: fixed;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  top: -20px;
+  opacity: 0.8;
+  animation: fall linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+} */
+
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: linear-gradient(45deg,#ff0080,#ff8c00,#40e0d0,#ff1493);
+  background-size:400% 400%;
+  animation:gradientMove 8s ease infinite;
+  color:white;
+  overflow-x:hidden;
+}
+
+@keyframes gradientMove{
+  0%{background-position:0% 50%;}
+  50%{background-position:100% 50%;}
+  100%{background-position:0% 50%;}
+}
+
+/* Navbar */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 10%;
+  background:rgba(0,0,0,0.4);
+}
+
+.logo{
+  font-weight:bold;
+  font-size:22px;
+}
+
+nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:white;
+}
+
+.menu-toggle{
+  display:none;
+  font-size:24px;
+  cursor:pointer;
+}
+
+/* Hero */
+.hero{
+  height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  position:relative;
+}
+
+.hero h1{
+  font-size:3rem;
+}
+
+.hero button{
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  border-radius:25px;
+  background:yellow;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* Sections */
+section{
+  padding:80px 10%;
+  position:relative;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:20px;
+  margin-top:30px;
+}
+
+.grid div{
+  background:rgba(0,0,0,0.3);
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
+}
+
+/* Booking */
+.booking form{
+  max-width:400px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+input,select{
+  padding:10px;
+  border-radius:10px;
+  border:none;
+}
+
+.booking button{
+  padding:12px;
+  border:none;
+  border-radius:20px;
+  background:orange;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* Fade Animation */
+.fade{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s;
+}
+
+.fade.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Water Color Side Animation */
+section::before, section::after{
+  content:"";
+  position:absolute;
+  width:100px;
+  height:100%;
+  top:0;
+  background:radial-gradient(circle,rgba(255,255,255,0.3),transparent);
+  animation:water 6s infinite alternate;
+}
+
+section::before{left:-50px;}
+section::after{right:-50px;}
+
+@keyframes water{
+  0%{transform:translateY(-30px);}
+  100%{transform:translateY(30px);}
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  background:rgba(0,0,0,0.4);
+}
+
+/* Mobile Responsive */
+@media(max-width:768px){
+  nav{
+    display:none;
+    flex-direction:column;
+    position:absolute;
+    top:60px;
+    right:10%;
+    background:black;
+    padding:10px;
+  }
+
+  nav.active{
+    display:flex;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+
+  .hero h1{
+    font-size:2rem;
+  }
+}

@@ -166,7 +166,7 @@ nav a{
 }
 
 /* Hero */
-.hero{
+/* .hero{
   height:90vh;
   display:flex;
   align-items:center;
@@ -187,8 +187,73 @@ nav a{
   background:yellow;
   font-weight:bold;
   cursor:pointer;
+} */
+
+/* HERO SECTION */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 60px 10%;
 }
 
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.hero-left button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 25px;
+  background: yellow;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.hero-left button:hover {
+  background: orange;
+  transform: scale(1.05);
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-right img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
 /* Sections */
 section{
   padding:80px 10%;
@@ -272,6 +337,23 @@ footer{
 }
 
 /* Mobile Responsive */
+@media(max-width: 768px){
+
+  .hero-container{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left h1{
+    font-size: 2rem;
+  }
+
+  .hero-right img{
+    max-width: 300px;
+    margin-top: 20px;
+  }
+
+}
 @media(max-width:768px){
   nav{
     display:none;

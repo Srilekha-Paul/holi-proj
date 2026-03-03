@@ -1,123 +1,3 @@
-/* * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  min-height: 100vh;
-  background: linear-gradient(45deg, #ff0080, #ff8c00, #40e0d0, #ff1493);
-  background-size: 400% 400%;
-  animation: gradientBG 8s ease infinite;
-  color: white;
-  text-align: center;
-  overflow-x: hidden;
-}
-
-@keyframes gradientBG {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-header {
-  padding: 50px 20px;
-}
-
-header h1 {
-  font-size: 3rem;
-  animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
-}
-
-section {
-  margin: 40px 20px;
-  padding: 30px;
-  background: rgba(0,0,0,0.3);
-  border-radius: 20px;
-}
-
-.menu ul {
-  list-style: none;
-  margin-top: 15px;
-}
-
-.menu li {
-  padding: 8px;
-  font-size: 18px;
-}
-
-.booking form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  max-width: 400px;
-  margin: auto;
-}
-
-input, select {
-  padding: 12px;
-  border-radius: 10px;
-  border: none;
-  outline: none;
-}
-
-button {
-  padding: 12px;
-  border-radius: 20px;
-  border: none;
-  background: yellow;
-  font-weight: bold;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-button:hover {
-  background: orange;
-  transform: scale(1.05);
-}
-
-.popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(0);
-  background: white;
-  color: black;
-  padding: 30px;
-  border-radius: 20px;
-  text-align: center;
-  transition: 0.4s;
-}
-
-.popup.active {
-  transform: translate(-50%, -50%) scale(1);
-}
-
-.abir {
-  position: fixed;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  top: -20px;
-  opacity: 0.8;
-  animation: fall linear forwards;
-}
-
-@keyframes fall {
-  to {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
-  }
-} */
-
-
-
 *{
   margin:0;
   padding:0;
@@ -164,30 +44,6 @@ nav a{
   font-size:24px;
   cursor:pointer;
 }
-
-/* Hero */
-/* .hero{
-  height:90vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  position:relative;
-}
-
-.hero h1{
-  font-size:3rem;
-}
-
-.hero button{
-  margin-top:20px;
-  padding:12px 25px;
-  border:none;
-  border-radius:25px;
-  background:yellow;
-  font-weight:bold;
-  cursor:pointer;
-} */
 
 /* HERO SECTION */
 .hero {
@@ -272,6 +128,118 @@ section{
   padding:20px;
   border-radius:15px;
   text-align:center;
+}
+/* Venue Section */
+.venue-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: url("https://images.unsplash.com/photo-1558611848-73f7eb4001ab") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.venue-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255,94,0,0.8), rgba(255,0,150,0.6));
+  /* backdrop-filter: blur(4px); */
+}
+
+/* Content container */
+.venue-container {
+  position: relative;
+  max-width: 1200px;
+  width: 90%;
+  text-align: center;
+  color: #fff;
+  animation: fadeUp 1.2s ease;
+}
+
+/* Title */
+.venue-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  animation: slideDown 1s ease;
+}
+
+.venue-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+/* Detail Cards */
+.venue-details {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.detail-card {
+  background: rgba(255, 255, 255, 0.15);
+  /* backdrop-filter: blur(10px); */
+  padding: 25px 40px;
+  border-radius: 15px;
+  transition: 0.4s ease;
+  cursor: pointer;
+}
+
+.detail-card:hover {
+  transform: translateY(-10px) scale(1.05);
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.detail-card h4 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.venue-btn {
+  display: inline-block;
+  margin-top: 40px;
+  padding: 14px 35px;
+  background: #fff;
+  color: #ff0066;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+.venue-btn:hover {
+  background: #ff0066;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Booking */
